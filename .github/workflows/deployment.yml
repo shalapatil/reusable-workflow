@@ -113,7 +113,7 @@ jobs:
       - name: Make Changes in repo-helm-chart
         run: |
           cd repo-helm-chart
-          cat <<EOF > ${{ input.config_file_path }}
+          cat <<EOF > ${{ inputs.config_file_path }}
           apiVersion: v1
           kind: ConfigMap
           metadata:
