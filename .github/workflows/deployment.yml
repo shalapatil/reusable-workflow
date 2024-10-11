@@ -10,21 +10,13 @@ on:
       config_file_path:
         required: true
         type: string
-    secrets:
-      AWS_ACCESS_KEY_ID:
-        description: "API key for deployment"
-      AWS_SECRET_ACCESS_KEY:
-       description: "API key for deployment"
+    secrets:     
       PAT_TOKEN:
         description: "API key for deployment"
       GCLOUD_SERVICE_KEY:
-        description: "API key for deployment"
-        
-      
+        description: "API key for deployment"            
 
-env:
-  AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+env:  
   AWS_DEFAULT_REGION: ap-south-1
   IMAGE: asia-south1-docker.pkg.dev/ondc-ref-buyer-app/${{ inputs.service_name }}/global:v
 
